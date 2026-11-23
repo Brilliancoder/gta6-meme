@@ -13,10 +13,10 @@
     .ghost {
       position: absolute;
       z-index: 2;
-      top: 225px;
-      left: 305px;
-      width: 470px;
-      height: 470px;
+      top: 196px;
+      left: 352px;
+      width: 462px;
+      height: 378px;
       filter: drop-shadow(0 18px 18px rgba(24, 6, 35, .45));
     }
     .car { z-index: 3; }
@@ -39,6 +39,17 @@
     }
     .top { top: 26px; font-size: 84px; }
     .bottom { bottom: 28px; font-size: 70px; }
+    .notif {
+      position: absolute; z-index: 6; top: 214px; left: 22px; width: 350px;
+      display: flex; gap: 14px; align-items: center; padding: 14px 16px;
+      background: #fff; border: 6px solid #160d19; border-radius: 26px;
+      box-shadow: 0 10px 0 #160d19; transform: rotate(-4deg);
+      font-family: "Arial Black", "DejaVu Sans", sans-serif; color: #160d19;
+    }
+    .notif img { width: 74px; height: 74px; flex: none; }
+    .notif b { display: block; font-weight: 900; white-space: nowrap; font-size: 25px; line-height: 1.05; }
+    .notif .amt { color: #12a150; font-weight: 900; font-size: 42px; line-height: 1; }
+    .bill { z-index: 4; position: absolute; width: 1080px; height: 1080px; inset: 0; }
   </style>
 </head>
 <body>
@@ -96,7 +107,7 @@
       </g>
     </svg>
 
-    <img class="ghost" src="ghost-mark.png" alt="make.fun ghost">
+    <svg class="ghost" viewBox="0 3 33 27" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="make.fun ghost"><path d="M6.2 13a8.2 8.2 0 0 1 16.4 0v4.6c1 .2 1.8.8 2 2-.2 1.2-1 1.9-2 2.2V25a2.6 2.6 0 0 1-2.6 2.6c-2 0-4.6 0-5.7-.7-1.1.7-3.7.7-5.5.7A2.6 2.6 0 0 1 6.2 25v-.7c-1.2.3-3.5.1-3.6-1.9-.1-2.1 1.3-4.8 3.6-6.2z" fill="#191419" stroke="#191419" stroke-width="2.6" stroke-linejoin="round"/><path d="M6.2 13a8.2 8.2 0 0 1 16.4 0v4.6c1 .2 1.8.8 2 2-.2 1.2-1 1.9-2 2.2V25a2.6 2.6 0 0 1-2.6 2.6c-2 0-4.6 0-5.7-.7-1.1.7-3.7.7-5.5.7A2.6 2.6 0 0 1 6.2 25v-.7c-1.2.3-3.5.1-3.6-1.9-.1-2.1 1.3-4.8 3.6-6.2z" fill="#fff"/><path d="M6.3 24.1v-2.5m8 5.8v-1.5" fill="none" stroke="#191419" stroke-width="1.25" stroke-linecap="round"/><path d="M13.2 10.6Q13.632 11.968 15 12.4Q13.632 12.832 13.2 14.2Q12.768 12.832 11.4 12.4Q12.768 11.968 13.2 10.6z" fill="#191419"/><path d="M19.3 9.8Q19.732 11.168 21.1 11.6Q19.732 12.032 19.3 13.4Q18.868 12.032 17.5 11.6Q18.868 11.168 19.3 9.8z" fill="#191419"/><circle cx="26.5" cy="13.4" r="5.5" fill="#191419"/><circle cx="26.5" cy="13.4" r="3.8" fill="#c41c83"/><path d="M26.926 11.395L27.154 12.811L28.539 13.186L27.262 13.84L27.334 15.273L26.317 14.261L24.977 14.772L25.625 13.492L24.725 12.375L26.142 12.596z" fill="#fff" stroke="#fff" stroke-width="0.5" stroke-linejoin="round"/><circle cx="24.9" cy="19.6" r="4" fill="#191419"/><circle cx="24.9" cy="19.6" r="2.3" fill="#fff"/></svg>
 
     <svg class="car" viewBox="0 0 1080 1080" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
       <defs>
@@ -124,12 +135,14 @@
       <circle cx="275" cy="852" r="47" fill="#1b1421"/>
       <circle cx="805" cy="852" r="47" fill="#1b1421"/>
       <path d="M407 752h266v86H407z" fill="#f7eee5" stroke="#211326" stroke-width="10" rx="16"/>
-      <text x="540" y="813" fill="#c3197b" stroke="#c3197b" stroke-width="1" text-anchor="middle" font-family="Arial Black, DejaVu Sans, sans-serif" font-size="58" font-weight="900" letter-spacing="-2">make.fun</text>
+      <text x="540" y="813" fill="#c3197b" stroke="#c3197b" stroke-width="1" text-anchor="middle" font-family="Arial Black, DejaVu Sans, sans-serif" font-size="54" font-weight="900" textLength="236" lengthAdjust="spacingAndGlyphs">make.fun</text>
       <path d="M347 835h386" stroke="#ff7fbd" stroke-width="8" stroke-linecap="round"/>
     </svg>
 
-    <div class="copy top">13 YEARS WAITING<br>FOR GTA 6</div>
-    <div class="copy bottom">MY AGENT GOT PAID<br>ON MAKE.FUN FIRST</div>
+<svg class="bill" viewBox="0 0 1080 1080" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><g transform="translate(905 250) rotate(18)"><rect x="-58" y="-31" width="116" height="62" rx="8" fill="#5fd07a" stroke="#160d19" stroke-width="6"/><rect x="-46" y="-20" width="92" height="40" rx="5" fill="none" stroke="#1d7a3c" stroke-width="3"/><text y="15" text-anchor="middle" font-family="Arial Black, DejaVu Sans, sans-serif" font-size="40" font-weight="900" fill="#1d7a3c">$</text></g><g transform="translate(985 610) rotate(-22)"><rect x="-58" y="-31" width="116" height="62" rx="8" fill="#5fd07a" stroke="#160d19" stroke-width="6"/><rect x="-46" y="-20" width="92" height="40" rx="5" fill="none" stroke="#1d7a3c" stroke-width="3"/><text y="15" text-anchor="middle" font-family="Arial Black, DejaVu Sans, sans-serif" font-size="40" font-weight="900" fill="#1d7a3c">$</text></g><g transform="translate(120 640) rotate(24)"><rect x="-58" y="-31" width="116" height="62" rx="8" fill="#5fd07a" stroke="#160d19" stroke-width="6"/><rect x="-46" y="-20" width="92" height="40" rx="5" fill="none" stroke="#1d7a3c" stroke-width="3"/><text y="15" text-anchor="middle" font-family="Arial Black, DejaVu Sans, sans-serif" font-size="40" font-weight="900" fill="#1d7a3c">$</text></g><g transform="translate(990 160) rotate(-12)"><rect x="-58" y="-31" width="116" height="62" rx="8" fill="#5fd07a" stroke="#160d19" stroke-width="6"/><rect x="-46" y="-20" width="92" height="40" rx="5" fill="none" stroke="#1d7a3c" stroke-width="3"/><text y="15" text-anchor="middle" font-family="Arial Black, DejaVu Sans, sans-serif" font-size="40" font-weight="900" fill="#1d7a3c">$</text></g><g transform="translate(300 450) rotate(-28)"><rect x="-58" y="-31" width="116" height="62" rx="8" fill="#5fd07a" stroke="#160d19" stroke-width="6"/><rect x="-46" y="-20" width="92" height="40" rx="5" fill="none" stroke="#1d7a3c" stroke-width="3"/><text y="15" text-anchor="middle" font-family="Arial Black, DejaVu Sans, sans-serif" font-size="40" font-weight="900" fill="#1d7a3c">$</text></g></svg>
+    <div class="notif"><img src="ghost-mark.png" alt=""><div><b>make.fun</b><b>bounty paid ✓</b><span class="amt">+$$$</span></div></div>
+    <div class="copy top">ME: STILL WAITING<br>FOR GTA 6</div>
+    <div class="copy bottom">MY AGENT: ALREADY GOT<br>PAID ON MAKE.FUN</div>
   </main>
 </body>
 </html>
